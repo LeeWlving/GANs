@@ -21,7 +21,7 @@ Both Generator and Discriminator are stacked fully-connected layers in case of *
 
 ### Vanilla GAN
 
-This loss function is from the original paper by [Goodfellow et al.](https://arxiv.org/abs/1406.2661). It can be thought as minimax game between generator and discriminator where generator ( $$G$$ ) trying to fool the discriminator (<a href="https://www.codecogs.com/eqnedit.php?latex=$D$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$D$" title="$D$" /></a>), and the discriminator trying to correctly classify real vs. fake.
+This loss function is from the original paper by [Goodfellow et al.](https://arxiv.org/abs/1406.2661). It can be thought as minimax game between generator and discriminator where generator ( $G$ ) trying to fool the discriminator ( $D$ ), and the discriminator trying to correctly classify real vs. fake.
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=$$\underset{G}{\text{minimize}}\;&space;\underset{D}{\text{maximize}}\;&space;\mathbb{E}_{x&space;\sim&space;p_\text{data}}\left[\log&space;D(x)\right]&space;&plus;&space;\mathbb{E}_{z&space;\sim&space;p(z)}\left[\log&space;\left(1-D(G(z))\right)\right]$$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$$\underset{G}{\text{minimize}}\;&space;\underset{D}{\text{maximize}}\;&space;\mathbb{E}_{x&space;\sim&space;p_\text{data}}\left[\log&space;D(x)\right]&space;&plus;&space;\mathbb{E}_{z&space;\sim&space;p(z)}\left[\log&space;\left(1-D(G(z))\right)\right]$$" title="$$\underset{G}{\text{minimize}}\; \underset{D}{\text{maximize}}\; \mathbb{E}_{x \sim p_\text{data}}\left[\log D(x)\right] + \mathbb{E}_{z \sim p(z)}\left[\log \left(1-D(G(z))\right)\right]$$" /></a>
 
